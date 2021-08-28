@@ -1,0 +1,149 @@
+::selection {
+    background: #f7d07e;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+body {
+    font-size: 13pt;
+    font-family: monospace;
+    color: white ;
+    background: linear-gradient(45deg, #57003f 0%,#f57453 100%);
+    font-family: 'Ubuntu';
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#terminal {
+    width: 600px;
+    height: 400px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,.5);
+}
+#terminal-body {
+    background: rgba(56, 4, 40, .9);
+    height: calc(100% - 25px);
+    margin-top: -1px;
+    padding-top: 2px;
+    font-family: 'Ubuntu mono';
+    overflow-y:scroll;
+}
+#cmdline {
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    width: 100%;
+    font: inherit;
+    border: none;
+    color: inherit;
+}
+.terminal-toolbar {
+  background: linear-gradient(#504b45 0%,#3c3b37 100%);
+  width: 100%;
+  padding: 0 8px;
+  box-sizing: border-box;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.toolbar-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-button {
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  padding: 0;
+  font-size: 7px;
+  background: linear-gradient(#7d7871 0%, #595953 100%);
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.2);
+  box-shadow: 0px 0px 1px 0px #41403A,0px 1px 1px 0px #474642;
+  border: none;
+  margin-right: 4px;
+
+}
+.toolbar-button:hover {
+  cursor: pointer;
+}
+.toolbar-button--exit {
+  background: #f25d2b;
+  background: linear-gradient(#f37458 0%, #de4c12 100%);
+  background-clip: padding-box;
+}
+.toolbar-button:focus {
+  outline: none;
+}
+#output {
+    clear: both;
+    width: 100%;
+}
+#prompt {
+    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-orient: vertical;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-orient: vertical;
+    display: box;
+    box-pack: center;
+    box-orient: vertical;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.prompt-color {
+    color: #45D40C;
+}
+.input-line {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: horizontal;
+    box-align: stretch;
+    clear: both;
+}
+.input-line > div:nth-child(2) {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+}
+
+#githubImg img {
+    position: fixed;
+    bottom: 0; right: 0;
+    border: 0;
+}
+
+@media screen and (max-height: 450px) {
+    body {
+        font-size: 11pt;
+    }
+ }
+
+@media screen and (max-width: 900px) {
+    #githubImg img {
+        transform: translateX(900px);
+    }
+
+    #container {
+        margin-right: 0;
+    }
+}
